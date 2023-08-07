@@ -14,7 +14,7 @@ color.init()
 print("\n'Colorama' imported!")
 time.sleep(0.5)
 print(color.Fore.GREEN +
-      "\n\nWelcome to Kathool's FreeChatGPT Python Script!\n" +
+      "\n\nWelcome to Kathool's FreePyChatGPT Python Script!\n" +
       color.Style.RESET_ALL)
 
 conversation_history = []
