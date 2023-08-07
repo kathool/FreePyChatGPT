@@ -29,7 +29,7 @@ required_modules = ["colorama", "requests", "json", "time"]
 for module in required_modules:
   install_module(module)
 
-print("Importing Modules...")
+print("\nImporting Modules...")
 import requests
 
 print("\n'Requests' imported!")
@@ -46,7 +46,7 @@ print("\n'Colorama' imported!")
 time.sleep(0.5)
 clear_console()
 print(color.Fore.GREEN +
-      "\n\nWelcome to Kathool's FreePyChatGPT Python Script!\n" +
+      "Welcome to Kathool's FreePyChatGPT Python Script!\n" +
       color.Style.RESET_ALL)
 
 conversation_history = []
