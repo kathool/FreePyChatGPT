@@ -1,9 +1,17 @@
 import subprocess
 import importlib
+import ctypes
 import sys
 import os
 
+def set_window_title(title):
+  ctypes.windll.kernel32.SetConsoleTitleW(title)
+
+executable_dir = os.path.dirname(os.path.abspath(__file__))
+
 version = "v1.0.9 BETA"
+
+set_window_title("FreePyChatGPT " + version)
 
 def clear_console():
   if os.name == "nt":
