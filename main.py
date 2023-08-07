@@ -1,4 +1,35 @@
-print("Importing Modules...\n")
+import subprocess
+import importlib
+import sys
+import os
+
+
+def clear_console():
+  if os.name == "nt":
+    _ = os.system("cls")
+  else:
+    _ = os.system("clear")
+
+
+print("FREEPYCHATGPT: Checking if dependencies are installed...")
+
+
+def install_module(module_name):
+  try:
+    importlib.import_module(module_name)
+  except ImportError:
+    print(f"FREEPYCHATGPT: {module_name} not found!")
+    print(f"FREEPYCHATGPT: Installing {module_name}...")
+    subprocess.check_call(
+      [sys.executable, "-m", "pip", "install", module_name])
+
+
+required_modules = ["colorama", "requests", "json", "time"]
+
+for module in required_modules:
+  install_module(module)
+
+print("Importing Modules...")
 import requests
 
 print("\n'Requests' imported!")
@@ -13,6 +44,7 @@ import colorama as color
 color.init()
 print("\n'Colorama' imported!")
 time.sleep(0.5)
+clear_console()
 print(color.Fore.GREEN +
       "\n\nWelcome to Kathool's FreePyChatGPT Python Script!\n" +
       color.Style.RESET_ALL)
