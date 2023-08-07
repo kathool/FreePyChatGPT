@@ -101,3 +101,5 @@ while True:
           "Sorry, there was an error processing your request." +
           color.Style.RESET_ALL)
     break
+
+input("Press Enter to exit...")
