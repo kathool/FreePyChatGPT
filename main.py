@@ -3,6 +3,7 @@ import importlib
 import sys
 import os
 
+version = "v1.0.9 BETA"
 
 def clear_console():
   if os.name == "nt":
@@ -46,7 +47,7 @@ print("\n'Colorama' imported!")
 time.sleep(0.5)
 clear_console()
 print(color.Fore.GREEN +
-      "Welcome to Kathool's FreePyChatGPT Python Script!\n" +
+      f"Welcome to FreePyChatGPT by Kathool! {version}\n" +
       color.Style.RESET_ALL)
 
 conversation_history = []
